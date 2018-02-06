@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BouncingBalls
 {
-    class Lines:
+    class Lines : IDrawable
     {
 
     }
