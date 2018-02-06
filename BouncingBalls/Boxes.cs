@@ -16,6 +16,7 @@ namespace BouncingBalls
         Pen pen;
         Rectangle rect;
         public enum ShapeColor { Red, Blue }
+        public static ISet<Ball> balls;
 
         public Boxes()
         {
@@ -50,9 +51,11 @@ namespace BouncingBalls
             g.DrawRectangle(pen, rect);
         }
 
-        public void Collision(Ball ball)
+        public void Collision()
         {
-            
+            foreach (var ball in balls)
+            {
+            }
         }
     }
 }

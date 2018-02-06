@@ -8,7 +8,7 @@ namespace BouncingBalls
 {
     interface ICollision : IDrawable
     {
-        void Collision(Ball ball);
+        void Collision();
         
     }
 
