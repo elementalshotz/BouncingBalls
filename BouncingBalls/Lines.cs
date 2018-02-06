@@ -10,9 +10,9 @@ namespace BouncingBalls
     class Lines : ICollision
     {
         private int length;
-        private int 
+        private int y;
         
-        public enum LineColor { yellow,green};
+        public enum LineColor { yellow,green }
 
         public void Draw(Graphics g)
         {
