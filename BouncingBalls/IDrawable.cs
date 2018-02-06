@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace Assignment2
+namespace BouncingBalls
 {
 	public interface IDrawable
 	{
