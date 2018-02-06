@@ -27,7 +27,7 @@ namespace Assignment2
 			form.Paint += new PaintEventHandler(Draw);
 
 			timer.Tick += new EventHandler(TimerEventHandler);
-			timer.Interval = 60;
+			timer.Interval = 1000/15;
 			timer.Start();
 
 			Application.Run(form);
