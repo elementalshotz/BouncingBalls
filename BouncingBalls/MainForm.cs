@@ -11,6 +11,7 @@ namespace Assignment2
 			Text = "Assignment 2";
 			Width = 800;
 			Height = 600;
+            DoubleBuffered = true;
 		}
 	}
 }
