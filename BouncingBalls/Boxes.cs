@@ -52,7 +52,7 @@ namespace BouncingBalls
 
         public void Collision(Ball ball)
         {
-
+            
         }
     }
 }

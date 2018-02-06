@@ -59,6 +59,11 @@ namespace BouncingBalls
 			{
 				ball.Draw(args.Graphics);
 			}
+
+            Boxes box = new Boxes(100, 50, 200, Boxes.ShapeColor.Red);
+            box.Draw(args.Graphics);
+            Boxes rect = new Boxes(50, 100, 100, 300, Boxes.ShapeColor.Blue);
+            rect.Draw(args.Graphics);
 		}
 
 	}

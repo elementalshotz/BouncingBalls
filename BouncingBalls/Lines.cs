@@ -16,7 +16,7 @@ namespace BouncingBalls
 
         public void Draw(Graphics g)
         {
-            g.DrawLine(pen,length );
+            //g.DrawLine(pen,length );
         }
 
         public Lines (int length, LineColor color )
