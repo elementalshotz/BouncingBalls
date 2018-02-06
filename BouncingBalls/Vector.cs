@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Assignment2
+namespace BouncingBalls
 {
 	public class Vector
 	{

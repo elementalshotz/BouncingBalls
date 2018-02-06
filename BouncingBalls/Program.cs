@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Assignment2
+namespace BouncingBalls
 {
 	class MainClass
 	{
