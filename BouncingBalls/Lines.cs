@@ -7,21 +7,28 @@ using System.Drawing;
 
 namespace BouncingBalls
 {
-    class Lines : IDrawable
+    class Lines : ICollision
     {
         private int length;
-        public enum Direction { up,right};
+        private int 
+        
+        public enum LineColor { yellow,green};
+
         public void Draw(Graphics g)
         {
-
+            g.DrawLine(pen,length );
         }
 
-        public Lines (int length, Direction direction )
+        public Lines (int length, LineColor color )
         {
 
         }
 
-        public void 
+        public void Collision (Ball ball)
+        {
+
+        }
+        
        
     }
 }
