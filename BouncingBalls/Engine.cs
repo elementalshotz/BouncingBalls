@@ -50,12 +50,9 @@ namespace BouncingBalls
 			foreach (var ball in balls)
 			{
 				ball.Move();
+                box.isInsideBox(ball);
+                rect.isInsideBox(ball);
             }
-
-            Boxes.balls = balls;
-
-            rect.Collision();
-            box.Collision();
 
             form.Refresh();
 		}

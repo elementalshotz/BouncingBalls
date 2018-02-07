@@ -47,7 +47,6 @@
   <ItemGroup>
     <Compile Include="Ball.cs" />
     <Compile Include="Boxes.cs" />
-    <Compile Include="Collider.cs" />
     <Compile Include="Engine.cs" />
     <Compile Include="ICollision.cs" />
     <Compile Include="IDrawable.cs" />

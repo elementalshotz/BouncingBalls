@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace BouncingBalls
 {
     interface ICollision : IDrawable
     {
-        void Collision();
+        Point point { get; }
+        void isInsideBox(Ball ball);
+        void hitLine();
         
     }
 

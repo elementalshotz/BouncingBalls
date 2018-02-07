@@ -9,14 +9,11 @@ namespace BouncingBalls
 {
     class Boxes : ICollision
     {
-        private int x;
-        private int y;
-        private int length;
-        private int height;
+        Point position;
+        Size size;
         Pen pen;
         Rectangle rect;
         public enum ShapeColor { Red, Blue }
-        public static ISet<Ball> balls;
 
         public Boxes()
         {
@@ -28,10 +25,8 @@ namespace BouncingBalls
 
         public Boxes(int x, int y, int length, int height, ShapeColor color)  //Shape: Rectangle
         {
-            this.x = x;
-            this.y = y;
-            this.length = length;
-            this.height = height;
+            position = new Point(x, y);
+            size = new Size(length, height);
 
             switch (color)
             {
@@ -43,7 +38,7 @@ namespace BouncingBalls
                     break;
             }
 
-            rect = new Rectangle(x, y, length, height);
+            rect = new Rectangle(position, size);
         }
 
         public void Draw(Graphics g)
@@ -51,11 +46,16 @@ namespace BouncingBalls
             g.DrawRectangle(pen, rect);
         }
 
-        public void Collision()
+        public Point point { get { return position; } }
+
+        public void isInsideBox(Ball ball)
         {
-            foreach (var ball in balls)
-            {
-            }
+
+        }
+
+        public void hitLine()
+        {
+
         }
     }
 }
