@@ -11,8 +11,7 @@ namespace BouncingBalls
     {
         Point point { get; }
         void isInsideBox(Ball ball);
-        void hitLine();
-        
+        void hitLine(Ball ball);
     }
 
 }

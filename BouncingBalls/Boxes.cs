@@ -53,7 +53,7 @@ namespace BouncingBalls
 
         }
 
-        public void hitLine()
+        public void hitLine(Ball ball)
         {
 
         }
