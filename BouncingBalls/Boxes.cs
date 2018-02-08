@@ -50,7 +50,7 @@ namespace BouncingBalls
 
         public void isInsideBox(Ball ball)
         {
-
+            
         }
 
         public void hitLine(Ball ball)

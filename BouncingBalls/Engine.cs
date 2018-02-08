@@ -45,7 +45,7 @@ namespace BouncingBalls
 
 		private void TimerEventHandler(Object obj, EventArgs args)
 		{
-			if (random.Next(100) < 25) AddBall();
+            if (balls.Count < 50) if (random.Next(100) < 25) AddBall();
 
 			foreach (var ball in balls)
 			{

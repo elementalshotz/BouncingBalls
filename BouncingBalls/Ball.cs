@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace BouncingBalls
 {
-	public class Ball : IDrawable
+	public class Ball : ICollision
 	{
 		private Pen pen = new Pen(Color.Black);
 		private int radius;
@@ -39,5 +39,9 @@ namespace BouncingBalls
 			set { speed = value; }
 		}
 
+        public Point point { get { return position; } }
+
+        public void isInsideBox(Ball ball) { }
+        public void hitLine(Ball ball) { }
 	}
 }
