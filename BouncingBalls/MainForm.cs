@@ -8,7 +8,7 @@ namespace BouncingBalls
 	{
 		public MainForm() : base()
 		{
-			Text = "Assignment 2";
+			Text = "Bouncing Balls";
 			Width = 800;
 			Height = 600;
             DoubleBuffered = true;

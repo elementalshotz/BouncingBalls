@@ -14,7 +14,10 @@ namespace BouncingBalls
 
 		private Random random = new Random();
 
-		public Engine()
+        Boxes box = new Boxes(100, 50, 200, Color.Red);
+        Boxes rect = new Boxes(50, 100, 100, 300, Color.Blue);
+
+        public Engine()
 		{
 			form = new MainForm();
 			timer = new Timer();
@@ -30,8 +33,7 @@ namespace BouncingBalls
 			timer.Interval = 1000/25;
 			timer.Start();
 
-			Application.Run(form);
-
+            Application.Run(form);
 		}
 
 		private void AddBall()
@@ -43,14 +45,16 @@ namespace BouncingBalls
 
 		private void TimerEventHandler(Object obj, EventArgs args)
 		{
-			if (random.Next(100) < 25) AddBall();
+            if (balls.Count < 50) if (random.Next(100) < 25) AddBall();
 
 			foreach (var ball in balls)
 			{
 				ball.Move();
-			}
+                box.isInsideBox(ball);
+                rect.isInsideBox(ball);
+            }
 
-			form.Refresh();
+            form.Refresh();
 		}
 
 		private void Draw(Object obj, PaintEventArgs args)
@@ -59,6 +63,9 @@ namespace BouncingBalls
 			{
 				ball.Draw(args.Graphics);
 			}
+
+            box.Draw(args.Graphics);
+            rect.Draw(args.Graphics);
 		}
 
 	}

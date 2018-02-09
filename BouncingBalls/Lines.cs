@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace BouncingBalls
 {
-    class Lines : ICollision
+    class Lines
     {
         private int length;
         private int y;
@@ -16,7 +16,7 @@ namespace BouncingBalls
 
         public void Draw(Graphics g)
         {
-            g.DrawLine(pen,length );
+            //g.DrawLine(pen,length );
         }
 
         public Lines (int length, LineColor color )
@@ -24,7 +24,7 @@ namespace BouncingBalls
 
         }
 
-        public void Collision (Ball ball)
+        public void Collision ()
         {
 
         }
