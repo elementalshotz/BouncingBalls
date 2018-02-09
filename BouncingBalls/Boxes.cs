@@ -13,37 +13,36 @@ namespace BouncingBalls
         Size size;
         Pen pen;
         Rectangle rect;
-        public enum ShapeColor { Red, Blue }
 
         public Boxes()
         {
 
         }
 
-        public Boxes(int x, int y, int sides, ShapeColor color) : this(x, y, sides, sides, color)         //Shape: Square
+        public Boxes(int x, int y, int sides, Color color) : this(x, y, sides, sides, color)         //Shape: Square
         {}
 
-        public Boxes(int x, int y, int length, int height, ShapeColor color)  //Shape: Rectangle
+        public Boxes(int x, int y, int length, int height, Color color) : this(new Point(x, y), new Size(length, height), color) //Shape: Rectangle
+        {}
+
+        public Boxes(Point point, Size size, Color color)
         {
-            position = new Point(x, y);
-            size = new Size(length, height);
-
-            switch (color)
-            {
-                case (ShapeColor.Blue):
-                    pen = new Pen(Color.Blue);
-                    break;
-                case (ShapeColor.Red):
-                    pen = new Pen(Color.Red);
-                    break;
-            }
-
-            rect = new Rectangle(position, size);
+            position = point;
+            this.size = size;
+            pen = new Pen(color);
+            rect = new Rectangle(point, size);
         }
 
         public void Draw(Graphics g)
         {
             g.DrawRectangle(pen, rect);
+        }
+
+        public void Update(Point position, int radius)
+        {
+            this.position = position;
+            rect.X = position.X - radius;
+            rect.Y = position.Y - radius;
         }
 
         public Point point { get { return position; } }

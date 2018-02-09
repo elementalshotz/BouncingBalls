@@ -8,11 +8,13 @@ namespace BouncingBalls
 		private Pen pen = new Pen(Color.Black);
 		private int radius;
         Point position;
+        Boxes box;
 
 		public Ball(Point position, int radius)
 		{
             this.position = position;
 			this.radius = radius;
+            box = new Boxes(new Point(position.X-radius, position.Y-radius), new Size(radius * 2, radius * 2), Color.Transparent);
 		}
 
 		public Ball(int x, int y, int radius) : this(new Point(x, y), radius)
@@ -22,6 +24,7 @@ namespace BouncingBalls
 
 		public void Draw(Graphics g)
 		{
+            box.Draw(g);
 			g.DrawEllipse(pen,position.X - radius, position.Y - radius, 2 * radius, 2 * radius);
 		}
 
@@ -29,6 +32,7 @@ namespace BouncingBalls
 		{
 			position.X = position.X + speed.X;
 			position.Y = position.Y + speed.Y;
+            box.Update(position,radius);
 		}
 
 		private Vector speed;

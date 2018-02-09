@@ -14,8 +14,8 @@ namespace BouncingBalls
 
 		private Random random = new Random();
 
-        Boxes box = new Boxes(100, 50, 200, Boxes.ShapeColor.Red);
-        Boxes rect = new Boxes(50, 100, 100, 300, Boxes.ShapeColor.Blue);
+        Boxes box = new Boxes(100, 50, 200, Color.Red);
+        Boxes rect = new Boxes(50, 100, 100, 300, Color.Blue);
 
         public Engine()
 		{

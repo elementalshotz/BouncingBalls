@@ -10,8 +10,6 @@ namespace BouncingBalls
     interface ICollision : IDrawable
     {
         Point point { get; }
-        void isInsideBox(Ball ball);
-        void hitLine(Ball ball);
     }
 
 }
