@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BouncingBalls
 {
-    class Boxes : ICollision
+    public class Boxes : ICollision
     {
         Point position;
         Size size;

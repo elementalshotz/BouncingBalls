@@ -16,6 +16,12 @@ namespace BouncingBalls
 
         Boxes box = new Boxes(100, 50, 200, Color.Red);
         Boxes rect = new Boxes(50, 100, 100, 300, Color.Blue);
+        Lines line1 = new Lines(0, 550, 800, 550, Color.Yellow);
+        Lines Line2 = new Lines(775, 0, 775, 800, Color.Green);
+        Lines Line3 = new Lines(10, 0, 10, 800, Color.Green);
+        Lines Line4 = new Lines(0, 10, 800, 10, Color.Yellow);
+        Lines Line5 = new Lines(580, 250, 580, 450, Color.Green);
+
 
         public Engine()
 		{
@@ -50,8 +56,6 @@ namespace BouncingBalls
 			foreach (var ball in balls)
 			{
 				ball.Move();
-                box.isInsideBox(ball);
-                rect.isInsideBox(ball);
             }
 
             form.Refresh();
@@ -66,6 +70,12 @@ namespace BouncingBalls
 
             box.Draw(args.Graphics);
             rect.Draw(args.Graphics);
+            line1.Draw(args.Graphics);
+            Line2.Draw(args.Graphics);
+            Line3.Draw(args.Graphics);
+            Line4.Draw(args.Graphics);
+            Line5.Draw(args.Graphics);
+            
 		}
 
 	}

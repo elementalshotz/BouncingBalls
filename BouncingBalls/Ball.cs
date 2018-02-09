@@ -5,10 +5,10 @@ namespace BouncingBalls
 {
 	public class Ball : ICollision
 	{
-		private Pen pen = new Pen(Color.Black);
+		private Pen pen = new Pen(Color.White);
 		private int radius;
         Point position;
-        Boxes box;
+        public Boxes box;
 
 		public Ball(Point position, int radius)
 		{

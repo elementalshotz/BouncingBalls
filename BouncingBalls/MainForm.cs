@@ -12,6 +12,10 @@ namespace BouncingBalls
 			Width = 800;
 			Height = 600;
             DoubleBuffered = true;
+            BackColor = System.Drawing.Color.Black;
+            
 		}
-	}
+
+        
+    }
 }
