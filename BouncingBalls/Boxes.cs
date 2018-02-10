@@ -50,17 +50,20 @@ namespace BouncingBalls
         {
             Vector vector = new Vector(ball.Speed.X, ball.Speed.Y);
 
-            if (ball.box.rect.IntersectsWith(box.rect) && box.pen.Color == Color.Red && ball.box.rect.Top > box.rect.Top)
+            if (ball.box.rect.IntersectsWith(box.rect))
             {
-                if (hasMultiplied == 0)
+                if (box.pen.Color == Color.Red)
                 {
-                    ball.Speed.X = (int)Decimal.Multiply(ball.Speed.X, (decimal)1.5);
-                    ball.Speed.Y = (int)Decimal.Multiply(ball.Speed.Y, (decimal)1.5);
-                    hasMultiplied = 1;
+                    if (hasMultiplied == 0)
+                    {
+                        ball.Speed.X = (int)Decimal.Multiply(ball.Speed.X, 2);
+                        ball.Speed.Y = (int)Decimal.Multiply(ball.Speed.Y, 2);
+                        hasMultiplied = 1;
+                    }
+                } else
+                {
+
                 }
-            } else if (ball.box.rect.IntersectsWith(box.rect) && box.pen.Color == Color.Blue)
-            {
-                
             } else
             {
                 ball.Speed = vector;

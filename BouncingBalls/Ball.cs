@@ -14,7 +14,7 @@ namespace BouncingBalls
 		{
             this.position = position;
 			this.radius = radius;
-            box = new Boxes(new Point(position.X-radius, position.Y-radius), new Size(radius * 2, radius * 2), Color.Transparent);
+            box = new Boxes(new Point(position.X-radius, position.Y-radius), new Size(radius * 2, radius * 2), Color.WhiteSmoke);
 		}
 
 		public Ball(int x, int y, int radius) : this(new Point(x, y), radius)
