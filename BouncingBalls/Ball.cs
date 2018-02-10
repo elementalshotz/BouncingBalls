@@ -44,8 +44,5 @@ namespace BouncingBalls
 		}
 
         public Point point { get { return position; } }
-
-        public void isInsideBox(Ball ball) { }
-        public void hitLine(Ball ball) { }
 	}
 }

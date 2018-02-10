@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace BouncingBalls
 {
-    class Lines
+    class Lines : ICollision
     {
         Pen pen;
         Point pointOne;
@@ -15,7 +15,7 @@ namespace BouncingBalls
 
         public Lines(int x1, int y1, int x2, int y2, Color color) : this(new Point(x1, y1), new Point(x2, y2), color)
         {
-
+            
         }
 
         public Lines(Point p1, Point p2, Color color)
