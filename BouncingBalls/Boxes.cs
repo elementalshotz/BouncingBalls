@@ -49,9 +49,10 @@ namespace BouncingBalls
         {
             Vector vector = new Vector(ball.Speed.X, ball.Speed.Y);
 
-            if (ball.box.rect.IntersectsWith(box.rect) && box.pen.Color == Color.Red)
+            if (ball.box.rect.IntersectsWith(box.rect) && box.pen.Color == Color.Red && ball.box.rect.Top > box.rect.Top)
             {
-                
+                ball.Speed.X = (int)Decimal.Multiply(ball.Speed.X, (decimal)1.5);
+                ball.Speed.Y = (int)Decimal.Multiply(ball.Speed.Y, (decimal)1.5);
             } else if (ball.box.rect.IntersectsWith(box.rect) && box.pen.Color == Color.Blue)
             {
                 
