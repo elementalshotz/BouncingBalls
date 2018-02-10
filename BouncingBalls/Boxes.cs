@@ -13,6 +13,7 @@ namespace BouncingBalls
         Size size;
         Pen pen;
         Rectangle rect;
+        int hasMultiplied = 0;
 
         public Boxes()
         {
@@ -51,8 +52,12 @@ namespace BouncingBalls
 
             if (ball.box.rect.IntersectsWith(box.rect) && box.pen.Color == Color.Red && ball.box.rect.Top > box.rect.Top)
             {
-                ball.Speed.X = (int)Decimal.Multiply(ball.Speed.X, (decimal)1.5);
-                ball.Speed.Y = (int)Decimal.Multiply(ball.Speed.Y, (decimal)1.5);
+                if (hasMultiplied == 0)
+                {
+                    ball.Speed.X = (int)Decimal.Multiply(ball.Speed.X, (decimal)1.5);
+                    ball.Speed.Y = (int)Decimal.Multiply(ball.Speed.Y, (decimal)1.5);
+                    hasMultiplied = 1;
+                }
             } else if (ball.box.rect.IntersectsWith(box.rect) && box.pen.Color == Color.Blue)
             {
                 
