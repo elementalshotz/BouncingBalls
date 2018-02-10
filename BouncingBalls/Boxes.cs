@@ -47,14 +47,17 @@ namespace BouncingBalls
 
         public void intersect(Ball ball, Boxes box)
         {
+            Vector vector = new Vector(ball.Speed.X, ball.Speed.Y);
+
             if (ball.box.rect.IntersectsWith(box.rect) && box.pen.Color == Color.Red)
             {
-                ball.Speed.X = ball.Speed.X * 2;
-                ball.Speed.Y = ball.Speed.Y * 2;
+                
             } else if (ball.box.rect.IntersectsWith(box.rect) && box.pen.Color == Color.Blue)
             {
-                ball.Speed.X = ball.Speed.X + 2;
-                ball.Speed.Y = ball.Speed.Y + 2;
+                
+            } else
+            {
+                ball.Speed = vector;
             }
         }
 
