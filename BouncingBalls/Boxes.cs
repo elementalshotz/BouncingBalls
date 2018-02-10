@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace BouncingBalls
 {
-    public class Boxes
+    public class Boxes : ICollider
     {
         Point position;
         Size size;
         Pen pen;
-        Rectangle rect;
+        public Rectangle rect;
         int hasChanged = 0;
 
         public Boxes()
