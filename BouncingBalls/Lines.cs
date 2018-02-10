@@ -29,8 +29,5 @@ namespace BouncingBalls
         {
             g.DrawLine(pen, pointOne, pointTwo);
         }
-
-        public Point point { get; }
-
     }
 }

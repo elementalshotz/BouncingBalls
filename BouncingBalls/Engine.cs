@@ -15,13 +15,14 @@ namespace BouncingBalls
 		private Random random = new Random();
 
         Boxes box = new Boxes(500, 30, 200, Color.Red);
-        Boxes rect = new Boxes(50, 100, 100, 300, Color.Blue);
+        Boxes rect = new Boxes(50, 200, 100, 300, Color.Blue);
 
         Lines line1 = new Lines(0, 550, 800, 550, Color.Green);
         Lines Line2 = new Lines(775, 0, 775, 800, Color.Yellow);
         Lines Line3 = new Lines(10, 0, 10, 800, Color.Yellow);
         Lines Line4 = new Lines(0, 10, 800, 10, Color.Green);
         Lines Line5 = new Lines(580, 250, 580, 450, Color.Yellow);
+        Lines line = new Lines(50, 100, 300, 100, Color.Green);
         
 
         public Engine()
@@ -73,6 +74,8 @@ namespace BouncingBalls
 
             box.Draw(args.Graphics);
             rect.Draw(args.Graphics);
+
+            line.Draw(args.Graphics);
             line1.Draw(args.Graphics);
             Line2.Draw(args.Graphics);
             Line3.Draw(args.Graphics);
