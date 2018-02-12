@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace BouncingBalls
 {
-	public class Ball : ICollider
+	public class Ball : ChangeSpeed, ICollider
 	{
 		private Pen pen = new Pen(Color.White);
 		private int radius;
@@ -47,9 +47,12 @@ namespace BouncingBalls
 
         public void intersect(Ball ball, Boxes box)
         {
-            box.intersect(ball, box);
+            box.intersect(ball, box); //Calls on the input box intersect function to determine whether the ball intersects with a rectangle or not
         }
 
-        public void BallSpeed(Ball ball) { }
+        public void BallSpeed(Ball ball)
+        {
+            throw new NotImplementedException();
+        }
 	}
 }
