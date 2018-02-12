@@ -9,5 +9,6 @@ namespace BouncingBalls
     public interface ICollider : IDrawable
     {
         void intersect(Ball ball, Boxes box);
+        void BallSpeed(Ball ball);
     }
 }

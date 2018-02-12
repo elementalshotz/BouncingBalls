@@ -13,7 +13,6 @@ namespace BouncingBalls
         Size size;
         Pen pen;
         public Rectangle rect;
-        int hasChanged = 0;
 
         public Boxes()
         {
@@ -49,20 +48,18 @@ namespace BouncingBalls
         public void intersect(Ball ball, Boxes box)
         {
             Vector vector = new Vector(ball.Speed.X, ball.Speed.Y);
-
             if (ball.box.rect.IntersectsWith(box.rect))
             {
                 if (box.pen.Color == Color.Red)
-                {
-                    
-                } else
-                {
-                    
-                }
+                { }
+                else if (box.pen.Color == Color.Blue)
+                { }
             } else
             {
                 ball.Speed = vector;
             }
         }
+
+        public void BallSpeed(Ball ball) { }
     }
 }

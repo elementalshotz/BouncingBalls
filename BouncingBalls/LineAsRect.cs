@@ -35,27 +35,19 @@ namespace BouncingBalls
         {
             if (ball.box.rect.IntersectsWith(box.rect))
             {
-                if (color == Color.Yellow)
-                {
-                    if (ball.Speed.X > 0)
-                    {
-                        ball.Speed.X -= (2 * ball.Speed.X);
-                    }
-                    else
-                    {
-                        ball.Speed.X += (2 * ball.Speed.X);
-                    }
-                } else if (color == Color.Green)
-                {
-                    if (ball.Speed.Y > 0)
-                    {
-                        ball.Speed.Y -= (2 * ball.Speed.Y);
-                    }
-                    else
-                    {
-                        ball.Speed.Y += (2 * ball.Speed.Y);
-                    }
-                }
+                BallSpeed(ball);
+            }
+        }
+
+        public void BallSpeed(Ball ball)
+        {
+            if (color == Color.Yellow)
+            {
+                ball.Speed.X *= -1;
+            }
+            else if (color == Color.Green)
+            {
+                ball.Speed.Y *= -1;
             }
         }
     }
