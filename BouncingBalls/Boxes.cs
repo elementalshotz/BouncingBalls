@@ -51,7 +51,9 @@ namespace BouncingBalls
             if (ball.box.rect.IntersectsWith(box.rect))
             {
                 if (box.pen.Color == Color.Red)
-                { }
+                {
+                    ball.Speed = vector * new Vector(2, 2);
+                }
                 else if (box.pen.Color == Color.Blue)
                 { }
             } else
