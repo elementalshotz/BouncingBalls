@@ -17,12 +17,12 @@ namespace BouncingBalls
         RedBox box = new RedBox(500, 30, 200);
         BlueBox rect = new BlueBox(50, 200, new Size(100, 300));
 
-        HLine line = new HLine(0, 550, 800, 1, Color.Green);
+        HLine line1 = new HLine(0, 550, 800, 1);
         VLine line2 = new VLine(775, 0, 1, 800);
-        HLine line3 = new HLine(0, 5, 800, 1, Color.Green);
+        HLine line3 = new HLine(0, 5, 800, 1);
         VLine line4 = new VLine(10, 0, 1, 800);
         VLine line5 = new VLine(580, 250, 1, 150); //Test line somewhere inside the box of lines
-        HLine line6 = new HLine(50, 100, 200, 1, Color.Green);
+        HLine line6 = new HLine(50, 100, 200, 1);
 
         public Engine()
 		{
