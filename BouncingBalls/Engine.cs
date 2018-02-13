@@ -52,13 +52,13 @@ namespace BouncingBalls
 
 		private void TimerEventHandler(Object obj, EventArgs args)
 		{
-            if (balls.Count < 100) if (random.Next(100) < 25) AddBall();
+            if (balls.Count < 25) if (random.Next(100) < 25) AddBall();
 
 			foreach (var ball in balls)
 			{
 				ball.Move();
-                box.intersect(ball, box);
-                rect.intersect(ball, rect);
+                ball.intersect(ball, box);
+                ball.intersect(ball, rect);
 
                 line.intersect(ball, line);
                 line2.intersect(ball, line2);

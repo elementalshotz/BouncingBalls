@@ -13,7 +13,6 @@ namespace BouncingBalls
         Size size;
         Pen pen;
         public Rectangle rect;
-        ChangeSpeed speed = new ChangeSpeed();
 
         public Boxes()
         {
@@ -49,34 +48,17 @@ namespace BouncingBalls
         public void intersect(Ball ball, Boxes box)
         {
             Vector vector = new Vector(ball.Speed.X, ball.Speed.Y);
-
-            Console.Write("ball.box.rect.X < (box.rect.X + box.rect.Width) " + (ball.box.rect.X < (box.rect.X + box.rect.Width)) + " ball.box.rect.Y > box.rect.Y" + (ball.box.rect.Y > box.rect.Y) + " ball.box.rect.Y < (box.rect.Y + box.rect.Height)" + (ball.box.rect.Y < (box.rect.Y + box.rect.Height)) + " ball.box.rect.X > box.rect.X" + (ball.box.rect.X > box.rect.X));
-
-            if (ball.box.rect.X < (box.rect.X + box.rect.Width) || ball.box.rect.Y > box.rect.Y || ball.box.rect.Y < (box.rect.Y + box.rect.Height) || ball.box.rect.X > box.rect.X)
+            
+            if (box.rect.IntersectsWith(ball.box.rect))
             {
                 if (box.pen.Color == Color.Red)
                 {
-                    speed.METHOD = SpeedController.Method.multiply;
-
-                    if (speed.changeOnce != 1)
-                    {
-                        speed.changeVector(vector, 2);
-                        speed.changeOnce = 1;
-                    }
                 }
                 else if (box.pen.Color == Color.Blue)
                 {
-                    speed.METHOD = SpeedController.Method.divide;
-
-                    if (speed.changeOnce != 1)
-                    {
-                        speed.changeVector(vector, 2);
-                        speed.changeOnce = 1;
-                    }
                 }
             } else
             {
-                ball.Speed = vector;
             }
         }
 
