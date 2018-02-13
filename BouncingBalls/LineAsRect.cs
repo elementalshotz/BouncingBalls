@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BouncingBalls
 {
-    class LineAsRect
+    class LineAsRect : Boxes
     {
         Size size;
         Rectangle rect;
@@ -31,24 +31,7 @@ namespace BouncingBalls
             g.DrawRectangle(pen, rect);
         }
 
-        public void intersect(Ball ball, LineAsRect box)
-        {
-            if (ball.box.rect.IntersectsWith(box.rect))
-            {
-                BallSpeed(ball);
-            }
-        }
-
-        public void BallSpeed(Ball ball)
-        {
-            if (color == Color.Yellow)
-            {
-                ball.Speed.X *= -1;
-            }
-            else if (color == Color.Green)
-            {
-                ball.Speed.Y *= -1;
-            }
-        }
+        
+ 
     }
 }

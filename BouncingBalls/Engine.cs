@@ -18,10 +18,10 @@ namespace BouncingBalls
         Boxes rect = new Boxes(50, 200, 100, 300, Color.Blue);
 
         LineAsRect line = new LineAsRect(0, 550, 800, 1, Color.Green);
-        LineAsRect line2 = new LineAsRect(775, 0, 1, 800, Color.Yellow);
+        VLine line2 = new VLine(775, 0, 1, 800);
         LineAsRect line3 = new LineAsRect(0, 5, 800, 1, Color.Green);
-        LineAsRect line4 = new LineAsRect(10, 0, 1, 800, Color.Yellow);
-        LineAsRect line5 = new LineAsRect(580, 250, 1, 150, Color.Yellow); //Test line somewhere inside the box of lines
+        VLine line4 = new VLine(10, 0, 1, 800);
+        VLine line5 = new VLine(580, 250, 1, 150); //Test line somewhere inside the box of lines
         LineAsRect line6 = new LineAsRect(50, 100, 200, 1, Color.Green);
 
         public Engine()
