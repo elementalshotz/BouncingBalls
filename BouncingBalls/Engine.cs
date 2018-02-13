@@ -17,12 +17,12 @@ namespace BouncingBalls
         RedBox box = new RedBox(500, 30, 200);
         BlueBox rect = new BlueBox(50, 200, new Size(100, 300));
 
-        LineAsRect line = new LineAsRect(0, 550, 800, 1, Color.Green);
+        HLine line = new HLine(0, 550, 800, 1, Color.Green);
         VLine line2 = new VLine(775, 0, 1, 800);
-        LineAsRect line3 = new LineAsRect(0, 5, 800, 1, Color.Green);
+        HLine line3 = new HLine(0, 5, 800, 1, Color.Green);
         VLine line4 = new VLine(10, 0, 1, 800);
         VLine line5 = new VLine(580, 250, 1, 150); //Test line somewhere inside the box of lines
-        LineAsRect line6 = new LineAsRect(50, 100, 200, 1, Color.Green);
+        HLine line6 = new HLine(50, 100, 200, 1, Color.Green);
 
         public Engine()
 		{
@@ -63,6 +63,10 @@ namespace BouncingBalls
                 line2.intersect(ball, line2);
                 line4.intersect(ball, line4);
                 line5.intersect(ball, line5);
+
+                line1.intersect(ball, line1);
+                line3.intersect(ball, line3);
+                line6.intersect(ball, line6);
             }
 
             form.Refresh();
