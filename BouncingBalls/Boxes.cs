@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BouncingBalls
 {
-    public class Boxes : ICollider
+    public class Boxes
     {
         Point position;
         Size size;
@@ -44,38 +44,5 @@ namespace BouncingBalls
             rect.X = position.X - radius;
             rect.Y = position.Y - radius;
         }
-
-        public void intersect(Ball ball, Boxes box)
-        {
-            Vector vector = new Vector(ball.Speed.X, ball.Speed.Y);
-            
-            if (box.rect.IntersectsWith(ball.box.rect))
-            {
-                if (box.pen.Color == Color.Red)
-                {
-                    if ((ball.Speed.X) * 2 <= 10 && (ball.Speed.Y) * 2 <= 10)
-                    {
-                        ball.Speed.X *= 2;
-                        ball.Speed.Y *= 2;
-                    }
-
-
-                }
-                else if (box.pen.Color == Color.Blue)
-                {
-                    if ((ball.Speed.X)/2 != 0 && (ball.Speed.Y)/2 !=0)
-                    {
-                        ball.Speed.X /= 2;
-                        ball.Speed.Y /= 2;
-                    }
-
-                }
-            } else
-            {
-
-            }
-        }
-
-        public void BallSpeed(Ball ball) { }
     }
 }
