@@ -14,8 +14,8 @@ namespace BouncingBalls
 
 		private Random random = new Random();
 
-        Boxes box = new Boxes(500, 30, 200, Color.Red);
-        Boxes rect = new Boxes(50, 200, 100, 300, Color.Blue);
+        RedBox box = new RedBox(500, 30, 200);
+        BlueBox rect = new BlueBox(50, 200, new Size(100, 300));
 
         LineAsRect line = new LineAsRect(0, 550, 800, 1, Color.Green);
         VLine line2 = new VLine(775, 0, 1, 800);
@@ -57,8 +57,8 @@ namespace BouncingBalls
 			foreach (var ball in balls)
 			{
 				ball.Move();
-                ball.intersect(ball, box);
-                ball.intersect(ball, rect);
+                box.intersect(ball, box);
+                rect.intersect(ball, rect);
 
                 line.intersect(ball, line);
                 line2.intersect(ball, line2);
