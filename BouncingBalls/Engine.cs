@@ -82,7 +82,7 @@ namespace BouncingBalls
             box.Draw(args.Graphics);
             rect.Draw(args.Graphics);
 
-            line.Draw(args.Graphics);
+            line1.Draw(args.Graphics);
             line2.Draw(args.Graphics);
             line3.Draw(args.Graphics);
             line4.Draw(args.Graphics);
