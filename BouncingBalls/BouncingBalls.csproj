@@ -48,6 +48,7 @@
     <Compile Include="Ball.cs" />
     <Compile Include="BlueBox.cs" />
     <Compile Include="Boxes.cs" />
+    <Compile Include="HLine.cs" />
     <Compile Include="VLine.cs" />
     <Compile Include="Engine.cs" />
     <Compile Include="ICollider.cs" />
