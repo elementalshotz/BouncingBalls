@@ -53,10 +53,21 @@ namespace BouncingBalls
             {
                 if (box.pen.Color == Color.Red)
                 {
-                    
+                    if ((ball.Speed.X) * 2 <= 10 && (ball.Speed.Y) * 2 <= 10)
+                    {
+                        ball.Speed.X *= 2;
+                        ball.Speed.Y *= 2;
+                    }
+
+
                 }
                 else if (box.pen.Color == Color.Blue)
                 {
+                    if ((ball.Speed.X)/2 != 0 && (ball.Speed.Y)/2 !=0)
+                    {
+                        ball.Speed.X /= 2;
+                        ball.Speed.Y /= 2;
+                    }
 
                 }
             } else
