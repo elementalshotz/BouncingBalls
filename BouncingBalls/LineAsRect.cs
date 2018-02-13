@@ -10,14 +10,13 @@ namespace BouncingBalls
     class LineAsRect : Boxes
     {
         Size size;
-        Rectangle rect;
         Point point;
         Pen pen;
         Color color;
 
         public LineAsRect(int x, int y, int width, int height, Color color) : this(new Size(width, height), new Point(x, y), color) { }
 
-        public LineAsRect(Size size, Point point, Color color)
+        public LineAsRect(Size size, Point point, Color color) : base(point, size, color)
         {
             this.point = point;
             this.size = size;
@@ -25,13 +24,5 @@ namespace BouncingBalls
             pen = new Pen(color);
             this.color = color;
         }
-
-        public void Draw(Graphics g)
-        {
-            g.DrawRectangle(pen, rect);
-        }
-
-        
- 
     }
 }
