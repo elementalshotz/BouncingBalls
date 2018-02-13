@@ -60,12 +60,9 @@ namespace BouncingBalls
                 box.intersect(ball, box);
                 rect.intersect(ball, rect);
 
-                line.intersect(ball, line);
                 line2.intersect(ball, line2);
-                line3.intersect(ball, line3);
                 line4.intersect(ball, line4);
                 line5.intersect(ball, line5);
-                line6.intersect(ball, line6);
             }
 
             form.Refresh();
