@@ -53,12 +53,15 @@ namespace BouncingBalls
             {
                 if (box.pen.Color == Color.Red)
                 {
+                    
                 }
                 else if (box.pen.Color == Color.Blue)
                 {
+
                 }
             } else
             {
+
             }
         }
 
